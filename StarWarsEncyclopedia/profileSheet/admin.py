@@ -2,5 +2,6 @@
 from __future__ import unicode_literals
 
 from django.contrib import admin
+from profileSheet.models import Character
 
-# Register your models here.
+admin.site.register(Character)
