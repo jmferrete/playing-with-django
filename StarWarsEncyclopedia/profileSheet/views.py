@@ -14,3 +14,9 @@ def index(request):
     }
     return HttpResponse(template.render(context, request))
 
+def profile(request, character_id):
+    try:
+        character = Character.objects.get(pk=character_id)
+    except Character.DoesNotExist:
+        raise Http404('This character does not exist')
+    return render(request, 'profile.html', {'character': character})
