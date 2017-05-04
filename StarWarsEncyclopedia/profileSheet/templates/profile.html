@@ -1,7 +1,19 @@
-<div>
-  <label>Name: {{ character.name }}</label>
-  <br/>
-  <label>Description: {{ character.description }}</label>
-  <br/>
-  <label>Job: {{ character.get_job_display }}</label>
-</div>
+{% extends 'main.html' %}
+
+{% block content %}
+  <div class="row">
+    <div class="col">
+      <p>Name: {{ character.name }}</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <p>Description: {{ character.description }}</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <p>Job: {{ character.get_job_display }}</p>
+    </div>
+  </div>
+{% endblock content %}
